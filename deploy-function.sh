@@ -1,0 +1,1 @@
+gcloud functions deploy helloHttp --runtime nodejs18 --trigger-http --allow-unauthenticated
