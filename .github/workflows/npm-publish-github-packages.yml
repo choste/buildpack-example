@@ -14,5 +14,5 @@ jobs:
       - id: setup-pack
         uses: buildpacks/github-actions/setup-pack@v4.9.0
       - run: npm ci
-      - run: pack build hello --builder gcr.io/buildpack/builder:latest 
+      - run: pack build my-app --builder gcr.io/buildpacks/builder
       - run: docker images
