@@ -12,5 +12,5 @@ jobs:
         with:
           node-version: 18
       - run: npm ci
-      - run: docker run --platform linux/arm64/v8 -v /Users/carlhos/.lima/docker/sock/docker.sock:/var/run/docker.sock -v $PWD:/workspace -w /workspace buildpacksio/pack build helloHttp --builder gcr.io/buildpack/builder:latest 
+      - run: docker run -v /Users/carlhos/.lima/docker/sock/docker.sock:/var/run/docker.sock -v $PWD:/workspace -w /workspace buildpacksio/pack build helloHttp --builder gcr.io/buildpack/builder:latest 
       - run: docker images
